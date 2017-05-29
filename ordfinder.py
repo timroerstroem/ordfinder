@@ -13,13 +13,13 @@ while True:
     else:
         rows.append(inp)
 
+print("Indtast antal bogstaver pr. linje, afslut med en blank linje:")
 while True:
-    inp = input("Indtast antal bogstaver pr. linje, afslut med en blank
-                linje: ")
+    inp = input()
     if inp == '':
         break
     else:
-        answer.append(inp)
+        answer.append(int(inp))
 
 cols = []
 for i in range(len(rows[0])):
@@ -46,5 +46,8 @@ for i in range(len(words)):
     if matches == answer:
         correct_words.append(words[i])
 
-print("Disse ord matcher: " + correct_words)
+print("Følgende ord matcher: ")
+for i in range(len(correct_words)):
+    print(correct_words[i])
+
 input("Tryk Enter for at afslutte...")
